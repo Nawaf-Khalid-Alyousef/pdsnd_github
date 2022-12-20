@@ -15,3 +15,7 @@ i was used the jupyter nootbook, with data file it was chicago,new_york_city,was
 ### Credits
 will unfortunately until now there is. no credits
 
+## Conclusion
+The project was very useful and I learned a lot from it about how data analysis can help us make the right decisions
+
+
