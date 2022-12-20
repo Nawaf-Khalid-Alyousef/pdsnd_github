@@ -10,7 +10,7 @@ Exploring data
 Exploring data by python lang
 
 ### Files used
-Include the files used
+i was used the jupyter nootbook 
 
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
