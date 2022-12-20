@@ -207,10 +207,12 @@ def display_data(df):
    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n')
    start_loc = 0
    End_loc = 5
-   while view_data == 'yes':
-      print(df.iloc[start_loc:End_loc])
-      start_loc += 5
-      End_loc += 5
+   while True:
+    display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+    if display_data.lower() != 'yes':
+        break
+    print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers ="keys"))
+    i+=5
       view_data = input("Do you wish to continue?: ").lower()
       
 def main():
