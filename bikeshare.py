@@ -21,7 +21,7 @@ def get_filters():
     # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
     thecities = ('Chicago', 'New York City', 'Washington')
     while True:
-      city = input("\nWhich city do you wish to look through? Chicago, New York City, and Washington.\n")
+      city = input("\nWhich city do you wish to look through? Chicago, New York City, and Washington.\n").title()
       if city not in thecities:
         print("Sincerely apologize for missing it. Feel free to try again.")
         continue      
@@ -31,7 +31,7 @@ def get_filters():
     # TO DO: get user input for month (all, january, february, ... , june)
     themonths = ('all','January', 'February', 'March', 'April', 'May', 'June')
     while True:
-      month = input("\nWhich month do you wish to look through? (all, January, February, ... , June)\n")
+      month = input("\nWhich month do you wish to look through? (all, January, February, ... , June)\n").title()
       if month not in themonths:
         print("Sincerely apologize for missing it. Feel free to try again.")
         continue      
@@ -41,7 +41,7 @@ def get_filters():
     # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     thedays = ('all', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday','Sunday')
     while True:
-      day = input("\nWhich day of week do you wish to look through? (all, Monday, Tuesday, ... Sunday)\n") 
+      day = input("\nWhich day of week do you wish to look through? (all, Monday, Tuesday, ... Sunday)\n").title()
       if day not in thedays:
         print("Sincerely apologize for missing it. Feel free to try again.")
         continue      
@@ -207,10 +207,12 @@ def display_data(df):
    view_data = input('\nWould you like to view 5 rows of individual trip data? Enter yes or no\n')
    start_loc = 0
    End_loc = 5
-   while view_data == 'yes':
-      print(df.iloc[start_loc:End_loc])
-      start_loc += 5
-      End_loc += 5
+   while True:
+    display_data = input('\nWould you like to see 5 lines of raw data? Enter yes or no.\n')
+    if display_data.lower() != 'yes':
+        break
+    print(tabulate(df_default.iloc[np.arange(0+i,5+i)], headers ="keys"))
+    i+=5
       view_data = input("Do you wish to continue?: ").lower()
       
 def main():
