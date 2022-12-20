@@ -10,8 +10,8 @@ Exploring data to take action
 Exploring data by python lang
 
 ### Files used
-i was used the jupyter nootbook 
+i was used the jupyter nootbook, with data file it was chicago,new_york_city,washington, csv 
 
 ### Credits
-It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
+will unfortunately until now there is. no credits
 
